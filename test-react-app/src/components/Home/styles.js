@@ -1,35 +1,29 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background-color: #b752ff;
+  background-color: #32c2b9;
   padding: 20px;
   border-radius: 10px;
-
-  h1 {
-    font-family: 'Lucida Sans Unicode';
-    color: #fff;
-    text-transform: uppercase;
-  }
+  display: inline-block;
 
   input {
     height: 35px;
     border-radius: 5px;
     border: none;
-    margin-top: 30px;
     outline: none;
     padding-left: 10px;
   }
 `
 
 export const AddButton = styled.button`
-  background-color: #6cf000;
+  background-color: #fad928;
   color: #000;
   height: 35px;
   padding: 5px 10px;
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  margin-left: 14.5%;
+  margin-left: 15px;
 
   &:hover {
     opacity: 0.8;
@@ -40,16 +34,18 @@ export const Product = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
   background-color: #ffffff;
   border-radius: 5px;
   margin-top: 15px;
-  padding: 0 10px;
+  padding: 5px 10px;
 
   p {
+    font-size: 2rem;
     text-transform: capitalize;
-    font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+      sans-serif;
   }
 
   button {
@@ -57,5 +53,19 @@ export const Product = styled.div`
     border: none;
     cursor: pointer;
     font-size: 20px;
+  }
+
+  div {
+    width: 4rem;
+    display: flex;
+    justify-content: space-between;
+  }
+`
+
+export const Option = styled.button`
+  &:hover {
+    padding: 4px 0;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 `
