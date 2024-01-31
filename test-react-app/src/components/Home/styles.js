@@ -69,3 +69,14 @@ export const Option = styled.button`
     background-color: rgba(0, 0, 0, 0.3);
   }
 `
+
+export const ErrorSignal = styled.p`
+  color: #ffffff;
+  background-color: #ff0000;
+  padding: 0.5;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+`
