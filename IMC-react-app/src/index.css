@@ -1,4 +1,7 @@
 :root {
+  --primary-color: #ffffff;
+  --primary-color-alt: rgba(0, 0, 0, 0.87);
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -7,6 +10,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--primary-color-alt);
+  background-color: var(--primary-color);
 }
 
 * {
@@ -24,14 +29,11 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.87);
+    --primary-color-alt: #ffffff;
+    --primary-color: rgba(0, 0, 0, 0.87);
   }
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: rgba(0, 0, 0, 0.87);
-    background-color: #ffffff;
-  }
+  :root {}
 }

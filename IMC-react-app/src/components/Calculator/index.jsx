@@ -1,23 +1,22 @@
 import FigPeople from '../../assets/peopleBike.png'
+import { MainContainer, ImgDecoration, Form, InputNumber } from './styles.js'
 
 export default function Calculator() {
     return (
-        <>
-            <div className="">
-                <img src={FigPeople} alt="" />
-            </div>
-            <div className="">
+
+        <MainContainer>
+            <ImgDecoration src={FigPeople} alt='profile.img' />
+            <div>
                 <h1>Calculadora IMC</h1>
-                <div className="">
-                    <form action="">
-                        <label htmlFor="pesoUser">Seu peso:</label>
-                        <input type="text" id="pesoUser" required />
-                        <label htmlFor="alturaUser">Sua Altura:</label>
-                        <input type="text" id="alturaUser" required />
-                        <button type='submit'>Calcular</button>
-                    </form>
-                </div>
+                <Form action="">
+                    <label htmlFor="pesoUser">Peso</label>
+                    <InputNumber type="number" id="pesoUser" required />
+                    <label htmlFor="alturaUser">Altura</label>
+                    <InputNumber type="number" id="alturaUser" required />
+                    <button type='submit'>Calcular</button>
+                </Form>
             </div>
-        </>
+        </MainContainer>
+
     )
 }
