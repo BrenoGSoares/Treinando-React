@@ -12,7 +12,7 @@ export const MainContainer = styled.div`
     justify-content: space-around;
     background-color: var(--primary-color-alt);
     border-radius: 1rem;
-    padding: 3rem 4rem;
+    padding: 2rem 4rem;
     color: var(--primary-color);
   }
 `
@@ -54,5 +54,20 @@ export const InputNumber = styled.input`
   &::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+  }
+`
+
+export const TextResult = styled.p`
+  font-family: 'Montserrat';
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 2.5rem;
+
+  span {
+    color: var(--primary-color-alt);
+    background-color: var(--primary-color);
+    padding: 0.75rem 5px;
+    margin-bottom: 1rem;
+    border-radius: 1.5rem;
   }
 `
