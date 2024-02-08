@@ -69,5 +69,7 @@ export const Form = styled.form`
     border: none;
     color: var(--primary-color);
     background-color: var(--primary-color-alt);
+    cursor: pointer;
+    transition: 0.5s;
   }
 `
