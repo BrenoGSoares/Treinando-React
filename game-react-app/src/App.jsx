@@ -1,9 +1,10 @@
 import './App.css'
+import Quadrado from './components/quadrado'
 
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <Quadrado></Quadrado>
     </>
   )
 }
