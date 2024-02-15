@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { Quadro, Container, Linha } from './styles.js'
+import { Quadro, Container, Linha, Status } from './styles.js'
 
 function Square({ value, onSquareClick }) {
     return (<Quadro onClick={onSquareClick}>{value}</Quadro>)
@@ -36,7 +36,9 @@ export default function Quadrado() {
 
     return (
         <Container>
-            <div>{status}</div>
+            <Linha>
+                <Status>{status}</Status>
+            </Linha>
             <Linha>
                 <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
                 <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
