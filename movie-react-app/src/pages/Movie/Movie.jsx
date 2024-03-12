@@ -7,9 +7,11 @@ import {
     BsFillFileEarmarkTextFill,
 } from "react-icons/bs";
 
+import { MoviePage, Tagline, Info } from "./styles";
+
+
 import MovieCard from "../../components/MovieCard/MovieCard";
 
-import "./Movie.css";
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -38,40 +40,40 @@ const Movie = () => {
     }, [])
 
     return (
-        <div className="movie-page">
+        <MoviePage>
             {movie && (
                 <>
                     <MovieCard movie={movie} showLink={false} />
-                    <p className="tagline">
+                    <Tagline>
                         {movie.tagline}
-                    </p>
-                    <div className="info">
+                    </Tagline>
+                    <Info>
                         <h3>
                             <BsWallet2 /> Orçamento:
                         </h3>
                         <p>{formatcurrency(movie.budget)}</p>
-                    </div>
-                    <div className="info">
+                    </Info>
+                    <Info>
                         <h3>
                             <BsGraphUp /> Receita:
                         </h3>
                         <p>{formatcurrency(movie.revenue)}</p>
-                    </div>
-                    <div className="info">
+                    </Info>
+                    <Info>
                         <h3>
                             <BsHourglassSplit /> Duração:
                         </h3>
                         <p>{movie.runtime} minutos</p>
-                    </div>
-                    <div className="info description">
+                    </Info>
+                    <Info className="description">
                         <h3>
                             <BsFillFileEarmarkTextFill /> Descrição:
                         </h3>
                         <p>{movie.overview}</p>
-                    </div>
+                    </Info>
                 </>
             )}
-        </div>
+        </MoviePage>
     );
 };
 

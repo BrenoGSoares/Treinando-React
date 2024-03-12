@@ -5,7 +5,7 @@ import MovieCard from "../../components/MovieCard/MovieCard"
 const searchUrl = import.meta.env.VITE_SEARCH
 const apiKey = import.meta.env.VITE_API_KEY
 
-import "../Home/MoviesGrid.css"
+import { Title, MoviesContainer } from "../Home/styles"
 
 
 const Search = () => {
@@ -28,11 +28,11 @@ const Search = () => {
 
     return (
         <div className="container">
-            <h2 className="title">Resultados para: <span className="query-text">{query}</span></h2>
-            <div className="movies-container">
+            <Title>Resultados para: <span className="query-text">{query}</span></Title>
+            <MoviesContainer>
                 {movies.length > 0 &&
                     movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
-            </div>
+            </MoviesContainer>
         </div>
     )
 }
